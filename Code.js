@@ -5,12 +5,9 @@ function onOpen(e) {
 }
 
 function showSidebar() {
-  
+
   var template = HtmlService.createTemplateFromFile('index');
-  //template.variable = variable;
   var html = template.evaluate().setTitle('1i');
-  
-  
   //var html = HtmlService.createHtmlOutputFromFile('index')
   //    .setTitle('Change the numbers')
   //    .setWidth(300);
@@ -37,8 +34,8 @@ function sidebar_show() {
               '<div class="highlights">',
               results.join('\n'),
               "</div>","</div>"].join('\n')
-  
+
   html.append(full);
   DocumentApp.getUi().showSidebar(html);
-  
+
 }
