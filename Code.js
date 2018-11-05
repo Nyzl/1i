@@ -23,7 +23,7 @@ function results_clear() {
 
 function results_show() {
   var template = HtmlService.createTemplateFromFile('index');
-  var html = template.evaluate().setTitle('Content style checker');
+  var html = template.evaluate().setTitle('1i');
   var number = number_oresults;
   var full = ['<div class="results">',"<h3>Found", number ,"things to fix</h3>",
               '<div class="highlights">',
@@ -33,5 +33,4 @@ function results_show() {
   html.append(full);
   DocumentApp.getUi()
       .showSidebar(html);
-
 }
