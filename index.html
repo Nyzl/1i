@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <base target="_top">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" type="text/css" href="https://citizensadvice.github.io/ca-designsystem/docs/1.0/assets/dist/css/cabui.css">
+  <title>Sandbox Environment</title>
+
+
+
+
+</head>
+<body>
+<style>
+  .top-bar {
+    height: 8px;
+    width: 100%;
+    background-color: #004B88;
+    margin-bottom: 8px;
+  }
+
+  h2 {
+    margin-top: 8px;
+  }
+
+  h3 {
+    margin-top: 0px;
+  }
+
+  .content-switch-holder {
+    display: flex
+  }
+
+  .c-label {
+    transform: translateY(11%);
+    margin-right: 8px;
+  }
+
+  .onoffswitch {
+    position: relative;
+    width: 64px;
+    display: inline-block;
+    font-size: 80%;
+  }
+
+  .onoffswitch .onoffswitch-label {
+    display: block;
+    overflow: hidden;
+    cursor: pointer;
+    border: 1px solid hsl(0, 0%, 90%);
+    -moz-border-radius: 20px;
+    -webkit-border-radius: 20px;
+    border-radius: 20px;
+    margin: 0;
+  }
+
+  .onoffswitch .onoffswitch-inner {
+    width: 200%;
+    margin-left: -100%;
+    -webkit-transition: margin 0.15s ease-in-out;
+    -o-transition: margin 0.15s ease-in-out;
+    -moz-transition: margin 0.15s ease-in-out;
+    transition: margin 0.15s ease-in-out;
+  }
+
+  .onoffswitch .onoffswitch-inner:before,
+  .onoffswitch .onoffswitch-inner:after {
+    float: left;
+    width: 50%;
+    height: 28px;
+    padding: 0;
+    line-height: 28px;
+    font-size: 16px;
+    color: hsl(0, 0%, 100%);
+    font-weight: normal;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+
+  .onoffswitch .onoffswitch-inner:before {
+    content: "On";
+    padding-left: 8px;
+    background-color: #004B88;
+    color: hsl(0, 0%, 100%);
+  }
+
+  .onoffswitch .onoffswitch-inner:after {
+    content: "Off";
+    padding-right: 8px;
+    background-color: hsl(0, 0%, 98%);
+    color: hsl(0, 0%, 24%);
+    text-align: right;
+  }
+
+  .onoffswitch .onoffswitch-switch {
+    width: 26px;
+    height: 26px;
+    margin: 0;
+    background: hsl(0, 0%, 100%);
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.3);
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+    border-radius: 50%;
+    position: absolute;
+    top: 2px;
+    bottom: 0;
+    right: 35px;
+    -webkit-transition: right 0.15s ease-in-out;
+    -o-transition: right 0.15s ease-in-out;
+    -moz-transition: right 0.15s ease-in-out;
+    transition: right 0.15s ease-in-out;
+  }
+
+  .toggle-group {
+    position: relative;
+    height: 27px;
+    top: 50%;
+    margin-bottom: 24px;
+  }
+
+  .toggle-group input[type=checkbox] {
+    position: absolute;
+    left: 10px;
+  }
+
+  .toggle-group input[type=checkbox]:checked~.onoffswitch .onoffswitch-label .onoffswitch-inner {
+    margin-left: 0;
+  }
+
+  .toggle-group input[type=checkbox]:checked~.onoffswitch .onoffswitch-label .onoffswitch-switch {
+    right: 3px;
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.5);
+  }
+
+  .toggle-group input[type=checkbox]:focus~.onoffswitch {
+    outline: thin dotted #333;
+    outline: 0;
+  }
+
+  .toggle-group label {
+    position: absolute;
+    cursor: pointer;
+    padding-left: 65px;
+    display: inline-block;
+    text-align: left;
+    line-height: 24px;
+    width: 100%;
+    z-index: 1;
+    height: 24px;
+    font-weight: 200;
+    margin-bottom:
+  }
+
+  .results {
+    margin-bottom: 16px;
+    color: #004B88;
+    font-weight: 600;
+    border: 1px solid #004B88;
+    padding: 16px;
+    border-radius: 2px;
+    -webkit-transition: 0.15s ease-in-out;
+    -o-transition: 0.15s ease-in-out;
+    -moz-transition: 0.15s ease-in-out;
+    transition: 0.15s ease-in-out;
+  }
+
+  .highlights {
+    color: #000000;
+    font-weight: 400;
+  }
+
+  .green-highlight {
+    background-color: #4AFF77;
+  }
+
+  .pink-highlight {
+    background-color: #FF89DE;
+  }
+
+  .light-blue-highlight {
+    background-color: #00CFFF;
+  }
+
+  .yellow-highlight {
+    background-color: #E2FF00;
+  }
+
+  .purple-highlight {
+    background-color: #C2BDDE;
+  }
+  
+  .clear-highlights {
+   margin-left:8px;
+   cursor: pointer;
+  }
+  
+  .c-btn-container {
+    margin-bottom:20px;
+  }
+</style>
+
+<div class="top-bar"></div>
+<div class="c-wrap">
+  <div class="o-grid">
+    <div class="o-grid__unit">
+      <h2>Check your content</h2>
+      <p>This tool highlights style problems.</p>
+      <div class="c-btn-container">
+        <button type="button" class="c-btn c-btn--primary" onclick="javascript:Check();">
+          Check
+        </button>
+        
+        <a class="clear-highlights" onclick="javascript:Clear();">Clear highlights</a>
+
+      </div>
+    </div>
+
+  </div>
+  <script>
+  function Check(){
+  google.script.run.results_run();
+  }
+  
+  function Clear(){
+  google.script.run.results_clear();
+  }
+  
+    
+
+  </script>
+  </body>
+</html>
+
+
+

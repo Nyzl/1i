@@ -1,0 +1,13 @@
+{
+  "timeZone": "Europe/London",
+  "dependencies": {
+  },
+  "webapp": {
+    "access": "DOMAIN",
+    "executeAs": "USER_ACCESSING"
+  },
+  "exceptionLogging": "STACKDRIVER",
+  "executionApi": {
+    "access": "DOMAIN"
+  }
+}
