@@ -1,12 +1,12 @@
-# 1i
+# 1i [![clasp](https://img.shields.io/badge/built%20with-clasp-4285f4.svg)](https://github.com/google/clasp)
 
 A style guide checker built during OCtober 2018 Firebreak in the Citizens Advice Customer Journey team.
-The team was: [Alec Johnson](https://github.com/MrAlecJohnson), [Ian Ansell](https://github.com/Nyzl), [Adam Smith](https://github.com/smifaye), [Greg Lamyman](https://twitter.com/greglmy), Adam Parsons, Jon Manning
+The team was: [Alec Johnson](https://github.com/MrAlecJohnson), [Ian Ansell](https://github.com/Nyzl), [Adam Smith](https://github.com/smifaye), [Greg Lamyman](https://twitter.com/greglmy), [Adam Parsons](https://github.com/adamgparsons), Jon Manning
 
 The purpose was a build something that would highlight to users if they broke some of our simpler style rules. This would allow proof reading to focus more on tone rather than specific rules, and cut down on effort required.
 
 
-Example JSON structure
+## Example JSON structure
 ```
 
 "category": {
