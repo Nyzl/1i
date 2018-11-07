@@ -45,21 +45,21 @@ function findRegex(findme,colour,desc,rule_name) {
    }
 }
 
-function longSentence(maxWords, colour,desc,rule_name) {
-  var body = DocumentApp.getActiveDocument().getBody();
-  var text = body.getText()
-  var sentences = text.split(/\.|\n/);
-  for (i = 0; i < sentences.length; i++) {
-    var wordCount = sentences[i].split(/\s/).length;
-    if (wordCount > maxWords) {
-      var foundElement = body.findText(sentences[i]);
-      var foundText = foundElement.getElement().asText();
-      var start = foundElement.getStartOffset();
-      var end = foundElement.getEndOffsetInclusive();
-      foundText.setBackgroundColor(start, end, colour);
-      number_oresults++;
-      var pusher = '<p><span style="background-color:'+colour+'"><b>'+"Long sentence"+'</b> - '+ desc +'</span></p>';
-      results.push(pusher);
-    }
-  }
-}
+// function longSentence(maxWords, colour,desc,rule_name) {
+//   var body = DocumentApp.getActiveDocument().getBody();
+//   var text = body.getText()
+//   var sentences = text.split(/\.|\n/);
+//   for (i = 0; i < sentences.length; i++) {
+//     var wordCount = sentences[i].split(/\s/).length;
+//     if (wordCount > maxWords) {
+//       var foundElement = body.findText(sentences[i]);
+//       var foundText = foundElement.getElement().asText();
+//       var start = foundElement.getStartOffset();
+//       var end = foundElement.getEndOffsetInclusive();
+//       foundText.setBackgroundColor(start, end, colour);
+//       number_oresults++;
+//       var pusher = '<p><span style="background-color:'+colour+'"><b>'+"Long sentence"+'</b> - '+ desc +'</span></p>';
+//       results.push(pusher);
+//     }
+//   }
+// }
