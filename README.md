@@ -5,6 +5,12 @@ The team was: [Alec Johnson](https://github.com/MrAlecJohnson), [Ian Ansell](htt
 
 The purpose was a build something that would highlight to users if they broke some of our simpler style rules. This would allow proof reading to focus more on tone rather than specific rules, and cut down on effort required.
 
+## Installation
+Currently this is only available to users with citizensadvice.org.uk accounts, however you can clone this code for your own use.
+
+### Using clasp
+Git clone to a location and use clasp to initialise that folder as a new project, you can then clasp push to you own apps script project
+
 
 ## Example JSON structure
 ```
