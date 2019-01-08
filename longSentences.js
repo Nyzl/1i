@@ -1,6 +1,6 @@
-function cats() {
+function long_cats() {
 
-    var cat = {
+    var long_cat = {
         "category": {
             "sentences": {
                 "colour": "#00CFFF",
@@ -15,12 +15,12 @@ function cats() {
                             }
                         ]
                     }
-                    
+
                 }
             }
     }
     }
 
-return cat
+return long_cat
 
 }
