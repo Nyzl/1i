@@ -1,6 +1,6 @@
 
 number_oresults = 0;
-var cat = cats();
+var cat = rules();
 var results = [];
 
 function case_insensitive(re){

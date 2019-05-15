@@ -1,4 +1,4 @@
-var cat = cats();
+var cat = rules();
 var clearColour = "#FFFFFF";
 
 
@@ -38,3 +38,5 @@ function clearText() {
     }
   }
 }
+
+

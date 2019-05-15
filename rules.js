@@ -1,4 +1,4 @@
-function cats() {
+function rules() {
 
     var cat = {
         "category": {
